@@ -4,11 +4,13 @@ from typing import List, Union
 from uuid import UUID
 
 from constants import ShipmentStatus
+from entities.user import User
 
 
 @dataclass
 class Package:
     id: UUID
+    user_id: UUID
     name: str
     weight: float
     timestamp: datetime = field(default_factory=datetime.now)
@@ -26,7 +28,7 @@ class Package:
 @dataclass
 class Shipment:
     id: UUID
-    user_id: UUID
+    users: List[User]
     packages: List[Package]
     origin: str
     destination: str

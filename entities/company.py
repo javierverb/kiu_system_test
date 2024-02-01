@@ -9,7 +9,7 @@ from entities.shipping import Package, Shipment
 
 @dataclass
 class Company:
-    id: UUID = field(default_factory=uuid4)
+    id: UUID
     name: str
     shipments: List[Shipment]
 
