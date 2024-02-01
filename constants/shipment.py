@@ -1,0 +1,7 @@
+class ShipmentStatus:
+    PENDING = 'PENDING'
+    DELIVERED = 'DELIVERED'
+    CANCELLED = 'CANCELLED'
+    RETURNED = 'RETURNED'
+    LOST = 'LOST'
+    DAMAGED = 'DAMAGED'
